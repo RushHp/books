@@ -9,7 +9,6 @@ class BookSerializerTestCase(TestCase):
         """Сравниваем данные"""
         book_1 = Book.objects.create(name='Test book 1', price=258)
         book_2 = Book.objects.create(name='Test book 2', price=344)
-        book_3 = Book.objects.create(name='Test book 3', price=544)
 
         data = BookSerializer([book_1, book_2], many=True).data
         # Данные которые ожидаем.
